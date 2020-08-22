@@ -39,6 +39,14 @@
             <td><input type="text" name="count_comment"></td>
         </tr>
         <tr>
+            <td>Slug</td>
+            <td><input type="text" name="slug"></td>
+        </tr>
+        <tr>
+            <td>Active</td>
+            <td><input type="text" name="active"></td>
+        </tr>
+        <tr>
             <td><input type="reset" value="Xóa"></td>
             <td><input type="submit" value="Lưu"></td>
         </tr>

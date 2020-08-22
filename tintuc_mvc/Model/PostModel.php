@@ -12,7 +12,7 @@ class Post
     public $description;
     public $count_comment;
 
-    public function __construct($id_post, $id_cate, $title, $intro, $content, $image, $tag, $description, $count_comment)
+    public function __construct($id_post, $id_cate, $title, $intro, $content, $image, $tag, $description, $count_comment, $slug, $active)
     {
         $this->id_post = $id_post;
         $this->id_cate = $id_cate;
@@ -23,6 +23,8 @@ class Post
         $this->tag = $tag;
         $this->description = $description;
         $this->count_comment = $count_comment;
+        $this->slug = $slug;
+        $this->active = $active;
     }
 }
 class PostModel
@@ -40,13 +42,13 @@ class PostModel
         $result = $this->mysql->query($query);
         $data = [];
         foreach ($result->fetch_all() as $item) {
-            array_push($data, new Post($item[0], $item[1], $item[2], $item[3], $item[4], $item[5], $item[6], $item[7], $item[8]));
+            array_push($data, new Post($item[0], $item[1], $item[2], $item[3], $item[4], $item[5], $item[6], $item[7], $item[8], $item[9], $item[10]));
         }
         return $data;
     }
     function Add(Post $post)
     {
-        $query = "INSERT INTO post VALUE('$post->id_post', '$post->id_cate', '$post->title', '$post->intro', '$post->content', '$post->image', '$post->tag', '$post->description','$post->count_comment')";
+        $query = "INSERT INTO post VALUE('$post->id_post', '$post->id_cate', '$post->title', '$post->intro', '$post->content', '$post->image', '$post->tag', '$post->description','$post->count_comment', '$post->slug', '$post->active')";
         $result = $this->mysql->query($query);
         return $result;
     }
@@ -61,16 +63,22 @@ class PostModel
         $result = $this->mysql->query($query);
         $data = $result->fetch_all();
         if (count($data)) {
-            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7], $data[0][8]);
+            return new Post($data[0][0], $data[0][1], $data[0][2], $data[0][3], $data[0][4], $data[0][5], $data[0][6], $data[0][7], $data[0][8], $data[0][9], $data[0][10]);
         }
         return null;
     }
     function Update(Post $post)
     {
-        $query = "UPDATE post SET  id_cate = '$post->id_cate', title = '$post->title', intro = '$post->intro', content = '$post->content', image = '$post->image', tag = '$post->tag', description = '$post->description', count_comment = '$post->count_comment'
+        $query = "UPDATE post SET  id_cate = '$post->id_cate', title = '$post->title', intro = '$post->intro', content = '$post->content', image = '$post->image', tag = '$post->tag', description = '$post->description', count_comment = '$post->count_comment', slug = '$post->slug', active = '$post->active'
 WHERE id_post = '$post->id_post'";
         $result = $this->mysql->query($query);
         return $result;
     }
+    function delete($id_post){
+        $query = "DELETE FROM post WHERE id_post = $id_post";
+        $result = $this->mysql->query($query);  
+        return $result;
+    }
+
 }
 ?>

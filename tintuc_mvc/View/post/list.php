@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-    <link href="Assets/maincss.css" rel="stylesheet"></head>
+    <link href="Assets/maincss.css" rel="stylesheet">
+</head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <body>
         <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -32,6 +33,12 @@
                  <div class="scrollbar-sidebar" style="background-color:#e1f5e7; padding-top:10px">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
+                            <li >
+                                <a href="http://localhost/PHP/tintuc_mvc/index.php?c=admin&a=list">
+                                <i class="fas fa-users-cog"></i>
+                                    Admin
+                                </a>
+                            </li>
                             <li >
                                 <a href="http://localhost/PHP/tintuc_mvc/index.php?c=user&a=list">
                                 <i class="fas fa-user"></i>
@@ -85,6 +92,7 @@
                     }
                     ?>
                 </p>
+                <button><a href="index.php?c=post&a=add">Thêm mới</a></button>
                 <table >
                     <tr>
                         <th>Id_post</th>
@@ -96,6 +104,8 @@
                         <th>Tag</th>
                         <th>Description</th>
                         <th>Count_comment</th>
+                        <th>Slug</th>
+                        <th>Active</th>
                     </tr>
                     <?php
                     foreach ($data as $item) {
@@ -110,15 +120,20 @@
                             <td><?= $item->tag?></td>
                             <td><?= $item->description?></td>
                             <td><?= $item->count_comment?></td>
+                            <td><?= $item->slug?></td>
+                            <td><?= $item->active?></td>
                             <td>
                                 <a href="index.php?c=post&a=fix&id_post=<?=$item->id_post?>">Sửa</a>
+                            </td>
+                            <td>
+                                <a href="index.php?c=post&a=delete&id_post=<?=$item->id_post?>">Xóa</a>
                             </td>
                         </tr>
                         <?php
                     }
                     ?>
                 </table>
-                <button><a href="index.php?c=post&a=add">Thêm mới</a></button>
+                
             </div>  
          </div>   
 </div>

@@ -29,8 +29,10 @@ class PostController
         $tag = $_POST['tag'];
         $description = $_POST['description'];
         $count_comment = $_POST['count_comment'];
+        $slug = $_POST['slug'];
+        $active = $_POST['active'];
 
-        $post = new Post($id_post, $id_cate, $title, $intro, $content, $image, $tag, $description, $count_comment);
+        $post = new Post($id_post, $id_cate, $title, $intro, $content, $image, $tag, $description, $count_comment, $slug, $active);
         $result = $this->postModel->Add($post);
         if ($result == true)
             header('location: index.php?c=post&a=list&r=1');
@@ -53,12 +55,22 @@ class PostController
         $tag = $_POST['tag'];
         $description = $_POST['description'];
         $count_comment = $_POST['count_comment'];
-        
-        $post = new Post($id_post, $id_cate, $title, $intro, $content, $image, $tag, $description, $count_comment);
+        $slug = $_POST['slug'];
+        $active = $_POST['active'];
+
+        $post = new Post($id_post, $id_cate, $title, $intro, $content, $image, $tag, $description, $count_comment, $slug, $active);
         $result = $this->postModel->Update($post);
         if ($result == true)
             header('location: index.php?c=post&a=list&r=1');
         else header('location: index.php?c=post&a=list&r=0');
+    }
+    function delete()
+    {
+        $Id_post = $_GET['id_post'];
+        $result = $this->postModel->delete($Id_post);   
+        if ($result == true)
+            header('location: index.php?c=post&a=list&r=1');
+        else  header('location: index.php?c=post&a=list&r=0');
     }
 }
 ?>
