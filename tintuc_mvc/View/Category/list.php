@@ -34,6 +34,12 @@
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
                             <li >
+                                <a href="http://localhost/PHP/tintuc_mvc/index.php?c=admin&a=list">
+                                <i class="fas fa-users-cog"></i>
+                                    Admin
+                                </a>
+                            </li>
+                            <li >
                                 <a href="http://localhost/PHP/tintuc_mvc/index.php?c=user&a=list">
                                 <i class="fas fa-user"></i>
                                     User
@@ -86,6 +92,7 @@
                     }
                     ?>
                 </p>
+                <button><a href="index.php?c=category&a=add">Thêm mới</a></button>
                 <table >
                     <tr>
                         <th>Id_category</th>
@@ -110,12 +117,15 @@
                             <td>
                                 <a href="index.php?c=category&a=fix&id_cate=<?=$item->id_cate?>">Sửa</a>
                             </td>
+                            <td>
+                                <a href="index.php?c=category&a=delete&id_cate=<?=$item->id_cate?>">Xóa</a>
+                            </td>
                         </tr>
                         <?php
                     }
                     ?>
                 </table>
-                <button><a href="index.php?c=category&a=add">Thêm mới</a></button>
+                
             </div>  
          </div>   
 </div>

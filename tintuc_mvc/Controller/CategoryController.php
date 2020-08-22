@@ -54,5 +54,13 @@ class CategoryController
             header('location: index.php?c=category&a=list&r=1');
         else header('location: index.php?c=category&a=list&r=0');
     }
+    function delete()
+    {
+        $Id_cate = $_GET['id_cate'];
+        $result = $this->categoryModel->delete($Id_cate);   
+        if ($result == true)
+            header('location: index.php?c=category&a=list&r=1');
+        else  header('location: index.php?c=category&a=list&r=0');
+    }
 }
 ?>

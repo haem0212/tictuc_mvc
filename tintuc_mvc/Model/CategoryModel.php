@@ -69,5 +69,10 @@ WHERE id_cate = '$category->id_cate'";
         $result = $this->mysql->query($query);
         return $result;
     }
+    function delete($id_cate){
+        $query = "DELETE FROM category WHERE id_cate = $id_cate";
+        $result = $this->mysql->query($query);  
+        return $result;
+    }
 }
 ?>

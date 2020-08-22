@@ -1,8 +1,8 @@
 <?php
 define('SYSTEM_PATH', __DIR__);
-$get_controller = empty($_GET['c'])?'Home':$_GET['c'];
+$get_controller = empty($_GET['c'])?'user':$_GET['c'];
 //echo $get_controller;
-$get_action = empty($_GET['a'])?'Index':$_GET['a'];
+$get_action = empty($_GET['a'])?'list':$_GET['a'];
 $controller = $get_controller.'Controller';
 $path_controller = 'Controller/'.$get_controller.'Controller.php';
 if(!file_exists($path_controller)){//Kiem tra su ton tai cua file
