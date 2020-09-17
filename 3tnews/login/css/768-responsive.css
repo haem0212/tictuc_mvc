@@ -1,0 +1,356 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Wrapper
+2. Container
+3. Columns
+4. Light/dark navigation
+5. Top navigation
+6. Main navigation
+7. Header
+    7.1 Header body
+    7.2 Breaking news
+8. Blog
+    8.1 Article small view
+9. Shop
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    1. Wrapper
+-------------------------------------------------------------------*/
+#wrapper.boxed {
+    max-width: 780px
+}
+
+/*------------------------------------------------------------------
+    2. Container
+-------------------------------------------------------------------*/
+.container {
+    width: 730px
+}
+
+/*------------------------------------------------------------------
+    3. Columns
+-------------------------------------------------------------------*/
+.col {
+    float: left
+}
+
+/*------------------------------------------------------------------
+    4. Light/dark navigation
+-------------------------------------------------------------------*/
+/* Dark */
+nav.main_menu.dark {
+    background-color: #111
+}
+nav.main_menu.dark ul.header_main_menu > li > a {
+    color: #fff
+}
+nav.main_menu.dark ul.header_main_menu > li:hover > a,
+nav.main_menu.dark ul.header_main_menu > li.current-menu-item > a {
+    background-color: #222
+}
+nav.main_menu.dark ul.header_main_menu ul.sub-menu {
+    background-color: #222
+}
+nav.main_menu.dark ul.header_main_menu ul.sub-menu li {
+    border-bottom: 1px solid #333
+}
+nav.main_menu.dark ul.header_main_menu ul.sub-menu li a {
+    color: #fff
+}
+nav.main_menu.dark ul.header_main_menu ul.sub-menu li:hover > a {
+    background-color: #333
+}
+nav.main_menu.dark ul.header_main_menu > li > a span:after {
+    color: #999
+}
+nav.main_menu.dark ul.header_main_menu ul.sub-menu li a span:after {
+    color: #999
+}
+
+/* Light */
+nav.main_menu.light {
+    background-color: #fff
+}
+nav.main_menu.light ul.header_main_menu > li > a {
+    color: #111
+}
+nav.main_menu.light ul.header_main_menu > li:hover > a,
+nav.main_menu.light ul.header_main_menu > li.current-menu-item > a {
+    background-color: #eee
+}
+nav.main_menu.light ul.header_main_menu ul.sub-menu {
+    background-color: #333
+}
+nav.main_menu.light ul.header_main_menu ul.sub-menu li {
+    border-bottom: 1px solid #444
+}
+nav.main_menu.light ul.header_main_menu ul.sub-menu li a {
+    color: #fff
+}
+nav.main_menu.light ul.header_main_menu ul.sub-menu li:hover > a {
+    background-color: #444
+}
+nav.main_menu.light ul.header_main_menu > li > a span:after {
+    color: #999
+}
+nav.main_menu.light ul.header_main_menu ul.sub-menu li a span:after {
+    color: #999
+}
+nav.main_menu.light ul.dt_mega_menu {
+    border-top: 1px solid #eee
+}
+
+/*------------------------------------------------------------------
+    5. Top navigation
+-------------------------------------------------------------------*/
+nav.top_menu {
+    float: left;
+    display: block !important
+}
+ul.top_main_menu a {
+    color: #222
+}
+nav.top_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+nav.top_menu ul li {
+    position: relative
+}
+
+ul.top_main_menu > li {
+    float: left;
+    display: block;
+    border-right: 1px solid #ddd
+}
+ul.top_main_menu > li > a {
+    display: block;
+    color: #222;
+    padding: 9px 5px
+}
+ul.top_main_menu > li:hover > a,
+ul.top_main_menu > li.current-menu-item > a {
+    background-color: #e5e5e5
+}
+
+/* First drop down */
+ul.top_main_menu ul.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    background-color: #e5e5e5
+}
+ul.top_main_menu ul.sub-menu li {
+    border-bottom: 1px solid #ddd
+}
+ul.top_main_menu ul.sub-menu li a {
+    display: block;
+    padding: 4px 5px
+}
+ul.top_main_menu ul.sub-menu li:hover > a {
+    background-color: #ddd
+}
+ul.top_main_menu li:hover > ul.sub-menu {
+    display: block
+}
+
+/* Second drop down */
+ul.top_main_menu ul.sub-menu ul.sub-menu {
+    left: 100%;
+    top: 0
+}
+
+/* Drop arrows */
+ul.top_main_menu > li > a span:after {
+    display: inline-block;
+    vertical-align: top;
+    font-family: "FontAwesome";
+    content: "\f0d7";
+    padding-left: 5px;
+    font-size: 10px;
+    color: #b0b0b0
+}
+ul.top_main_menu ul.sub-menu li a span:after {
+    position: absolute;
+    right: 10px;
+    font-family: "FontAwesome";
+    content: "\f0da";
+    font-size: 10px;
+    color: #b0b0b0
+}
+
+/*------------------------------------------------------------------
+    6. Main navigation
+-------------------------------------------------------------------*/
+.header_menu {
+    margin-bottom: 30px
+}
+nav.main_menu {
+    display: block !important
+}
+nav.main_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+ul.header_main_menu {
+    position: relative
+}
+ul.header_main_menu > li {
+    font-size: 13px;
+    float: left;
+    display: block;
+    margin-right: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #555;
+}
+ul.header_main_menu > li > a {
+    position: relative;
+    display: block;
+    padding: 14px 8px;
+
+}
+ul.header_main_menu > li:hover > a,
+ul.header_main_menu > li.current-menu-item > a {}
+
+/* First drop down */
+ul.header_main_menu ul.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    min-width: 240px
+}
+ul.header_main_menu ul.sub-menu li {
+    position: relative
+}
+ul.header_main_menu ul.sub-menu li:last-child {
+    border-bottom: none;
+}
+ul.header_main_menu ul.sub-menu li a {
+    display: block;
+    padding: 7px 15px
+}
+ul.header_main_menu li:hover > ul.sub-menu {
+    display: block
+}
+ul.header_main_menu ul.sub-menu li:hover > a {}
+
+/* Second drop down */
+ul.header_main_menu ul.sub-menu ul.sub-menu {
+    left: 100%;
+    top: 0
+}
+
+/* Drop arrows */
+ul.header_main_menu > li > a span:after {
+    display: inline-block;
+    vertical-align: top;
+    font-family: "FontAwesome";
+    content: "\f0d7";
+    font-size: 10px;
+    padding-left: 5px
+}
+ul.header_main_menu ul.sub-menu li a span:after {
+    position: absolute;
+    right: 10px;
+    font-family: "FontAwesome";
+    content: "\f0da";
+    font-size: 10px
+}
+
+/* Mega menu */
+ul.header_main_menu li.has_dt_mega_menu:hover > a {
+    color: #222;
+    background-color: #fff
+}
+nav.main_menu ul.dt_mega_menu {
+    border: 1px solid #eee;
+    border-top: 0;
+    padding: 15px;
+    display: none;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    background-color: #fff
+}
+li.has_dt_mega_menu:hover > .dt_mega_menu {
+    display: block
+}
+/* Widgets */
+nav.main_menu .widget {
+    position: relative;
+    width: 25%;
+    float: left;
+    margin: 0;
+    padding: 10px
+}
+nav.main_menu .widget_custom_posts ul li .item_header {
+    width: 80px
+}
+
+/*------------------------------------------------------------------
+    7. Header
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+    7.1 Header body
+-------------------------------------------------------------------*/
+.header_body .brand_logo {
+    display: block
+}
+.header_body .header_ad {
+    margin-top: 20px;
+    display: block
+}
+
+/*------------------------------------------------------------------
+    7.2 Breaking news
+-------------------------------------------------------------------*/
+.breaking_news .owl-carousel {
+    width: 580px
+}
+.breaking_news .owl-carousel .owl-wrapper-outer {
+    width: 540px
+}
+
+/*------------------------------------------------------------------
+    8. Blog
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+    8.1 Article small view
+-------------------------------------------------------------------*/
+.article_small_view .item {
+    margin-bottom: 20px
+}
+.article_small_view .item .item_header {
+    width: 100px
+}
+
+/*------------------------------------------------------------------
+    9. Shop
+-------------------------------------------------------------------*/
+ul.products li.product {
+    clear: left
+}
+ul.products li.product {
+    width: 48%;
+    margin-right: 2%
+}
+ul.products li.product:nth-child(2n) {
+    float: right;
+    clear: none;
+    margin-right: 0
+}
+div.product .images,
+div.product .summary {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px
+}

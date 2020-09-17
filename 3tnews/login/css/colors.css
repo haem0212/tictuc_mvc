@@ -1,0 +1,40 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Text color
+2. Background color
+3. Border color
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    1. Text color
+-------------------------------------------------------------------*/
+h1#site_title span,
+article.item .item_category a,
+blockquote.alt:before,
+#header .header_meta .weather_report i,
+.editor_review .review_summary .item_score .summary {
+    color: #3aadff
+}
+
+/*------------------------------------------------------------------
+    2. Background color
+-------------------------------------------------------------------*/
+.review_box,
+article.item .item_header_line,
+.article_overlay_view .item .item_overlay_category a,
+.widget_gallery_post .item .item_overlay_category a,
+.main_slider .item .item_overlay_category a,
+.widget_timeline_posts .item:hover .timeline_content .pin_holder .inside,
+.editor_review .review_group .review .review_footer span,
+.onsale {
+    background-color: #3aadff
+}
+
+/*------------------------------------------------------------------
+    3. Border color
+-------------------------------------------------------------------*/
+.widget_timeline_posts .timeline_content .pin_holder .inside,
+blockquote {
+    border-color: #3aadff
+}

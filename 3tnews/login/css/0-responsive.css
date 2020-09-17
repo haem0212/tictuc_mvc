@@ -1,0 +1,242 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Container
+2. Columns
+3. Top navigation
+    3.1 Mobile toggle
+4. Main navigation
+    4.1 Mobile toggle
+5. Header
+    5.1 Header meta
+    5.2 Breaking news
+    5.3 Header body
+6. Blog
+    6.1 Global settings
+    6.2 Article list view
+    6.3 Article standard view
+    6.4 Article small view
+    6.5 Article overlay view
+7. Shop
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    1. Container
+-------------------------------------------------------------------*/
+.container {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+/*------------------------------------------------------------------
+    2. Columns
+-------------------------------------------------------------------*/
+.col {
+    width: 100%
+}
+
+/*------------------------------------------------------------------
+    3. Top navigation
+-------------------------------------------------------------------*/
+.header_meta {
+    margin-top: 15px;
+    background-color: #fff
+}
+.top_menu {
+    display: none;
+    clear: both
+}
+.top_main_menu a {
+    color: #111;
+    display: block;
+    padding: 5px 0;
+    border-top: 1px solid #eee
+}
+.top_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+.top_main_menu .sub-menu a {
+    padding-left: 20px
+}
+.top_main_menu .sub-menu ul a {
+    padding-left: 40px
+}
+.top_main_menu .sub-menu ul ul a {
+    padding-left: 60px
+}
+.top_main_menu .sub-menu ul ul ul a {
+    padding-left: 80px
+}
+
+/*------------------------------------------------------------------
+    3.1 Mobile toggle
+-------------------------------------------------------------------*/
+.open_top_menu {
+    display: block
+}
+
+/*------------------------------------------------------------------
+    4. Main navigation
+-------------------------------------------------------------------*/
+nav.main_menu {
+    background-color: #fff;
+    display: none
+}
+nav.main_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+ul.header_main_menu > li {
+    display: block
+}
+ul.header_main_menu > li > a,
+ul.header_main_menu .sub-menu a {
+    position: relative;
+    display: block;
+    color: #111;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee
+}
+nav.main_menu .sub-menu li a {
+    padding-left: 20px
+}
+nav.main_menu .sub-menu ul li a {
+    padding-left: 30px
+}
+nav.main_menu .sub-menu ul ul li a {
+    padding-left: 40px
+}
+nav.main_menu .sub-menu ul ul ul li a {
+    padding-left: 50px
+}
+nav.main_menu ul.dt_mega_menu {
+    padding: 15px 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #eee
+}
+
+/*------------------------------------------------------------------
+    4.1 Mobile toggle
+-------------------------------------------------------------------*/
+.open_main_menu {
+    display: block
+}
+
+/*------------------------------------------------------------------
+    5. Header
+-------------------------------------------------------------------*/
+#header {
+    margin-bottom: 30px
+}
+/*------------------------------------------------------------------
+    5.1 Header meta
+-------------------------------------------------------------------*/
+.header_meta .weather_report {
+    display: none
+}
+/*------------------------------------------------------------------
+    5.2 Breaking news
+-------------------------------------------------------------------*/
+.breaking_news {
+    display: none
+}
+
+/*------------------------------------------------------------------
+    5.3 Header body
+-------------------------------------------------------------------*/
+.header_body .brand_logo {
+    display: block;
+    text-align: center
+}
+.header_body .brand_logo img {
+    display: block;
+    text-align: center;
+    margin: 0 auto
+}
+.header_body .header_ad {
+    margin-top: 20px;
+    display: block
+}
+
+/*------------------------------------------------------------------
+    6. Blog
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+    6.1 Global settings
+-------------------------------------------------------------------*/
+article.item:hover .item_header_line {
+    width: 100%
+}
+article.item .item_format {
+    display: none
+}
+/*------------------------------------------------------------------
+    6.2 Article list view
+-------------------------------------------------------------------*/
+.article_list_view .item:hover .item_header .review_box {
+    left: 0
+}
+.article_list_view .item .item_header {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px
+}
+.article_list_view .item .item_content {
+    overflow: visible
+}
+.article_list_view .item .item_content h3 {
+    font-size: 18px;
+    line-height: 26px
+}
+
+/*------------------------------------------------------------------
+    6.3 Article standard view
+-------------------------------------------------------------------*/
+.article_standard_view .item .item_content h3 {
+    font-size: 18px;
+    line-height: 26px
+}
+
+/*------------------------------------------------------------------
+    6.4 Article small view
+-------------------------------------------------------------------*/
+.article_small_view .item {
+    margin-bottom: 20px
+}
+.article_small_view .item .item_header {
+    width: 100px
+}
+/*------------------------------------------------------------------
+    6.5 Article overlay view
+-------------------------------------------------------------------*/
+.article_overlay_view .item .item_overlay_content h3 {
+    font-size: 18px;
+    line-height: 26px
+}
+
+/*------------------------------------------------------------------
+    7. Shop
+-------------------------------------------------------------------*/
+ul.products li.product {
+    clear: left
+}
+ul.products li.product {
+    width: 48%;
+    margin-right: 2%
+}
+ul.products li.product:nth-child(2n) {
+    float: right;
+    clear: none;
+    margin-right: 0
+}
+div.product .images,
+div.product .summary {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px
+}
